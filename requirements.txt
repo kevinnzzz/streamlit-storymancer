@@ -44,4 +44,3 @@ tzdata==2024.2
 urllib3==2.3.0
 watchdog==6.0.0
 spacy==3.8.2
-pickle==4.0
