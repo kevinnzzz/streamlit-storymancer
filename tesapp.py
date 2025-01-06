@@ -13,7 +13,7 @@ else:
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
 model_alur_path = os.path.join(current_dir, 'modelalurnaivebayes.pkl')
-model_tema_path = os.path.join(current_dir, 'model_tema_naive_bayes.pkl')
+model_tema_path = os.path.join(current_dir, 'modeltemanaivebayes.pkl')
 vectorizer_path = os.path.join(current_dir, 'model_vectorizer.pkl')
 csv_orang_path = os.path.join(current_dir, 'orang.csv')
 csv_tempat_path = os.path.join(current_dir, 'datatempat.csv')
