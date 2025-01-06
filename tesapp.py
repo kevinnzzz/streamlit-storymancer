@@ -12,11 +12,11 @@ if getattr(sys, 'frozen', False):
 else:
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
-model_alur_path = os.path.join(current_dir, 'D:/kuliah/desktop/model_alur_naive_bayes.pkl')
-model_tema_path = os.path.join(current_dir, 'D:/kuliah/desktop/model_tema_naive_bayes.pkl')
-vectorizer_path = os.path.join(current_dir, 'D:/kuliah/desktop/model_vectorizer.pkl')
-csv_orang_path = os.path.join(current_dir, 'D:/kuliah/desktop/orang.csv')
-csv_tempat_path = os.path.join(current_dir, 'D:/kuliah/desktop/datatempat.csv')
+model_alur_path = os.path.join(current_dir, 'model_alur_naive_bayes.pkl')
+model_tema_path = os.path.join(current_dir, 'model_tema_naive_bayes.pkl')
+vectorizer_path = os.path.join(current_dir, 'model_vectorizer.pkl')
+csv_orang_path = os.path.join(current_dir, 'orang.csv')
+csv_tempat_path = os.path.join(current_dir, 'datatempat.csv')
 
 # 🔄 Memuat Model dan Vectorizer
 model_alur = joblib.load(model_alur_path)
