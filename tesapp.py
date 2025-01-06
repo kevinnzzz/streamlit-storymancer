@@ -5,7 +5,6 @@ import os
 import sys
 from heapq import nlargest
 from spacy.lang.en.stop_words import STOP_WORDS
-from spacy.cli import download
 
 # 🛠️ Mengatur Path File
 if getattr(sys, 'frozen', False):
@@ -65,7 +64,6 @@ def alur(text):
     return label_dict.get(hasil_prediksi[0], 'Label tidak dikenali')
 
 def ringkasancerita(text):
-    download('en_core_web_sm')
     stopwords = STOP_WORDS
     nlp = spacy.load('en_core_web_sm')
     doc = nlp(text)
