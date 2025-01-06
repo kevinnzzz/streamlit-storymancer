@@ -87,11 +87,12 @@ def ringkasancerita(text):
     
     select_length = int(len(sentence_tokens) * 0.3)
 
-    hasil = []
     sorted_sentences = sorted(sentence_scores, key=sentence_scores.get, reverse=True)
     summary = sorted_sentences[:select_length]
-    hasil.append(summary)
-    return ' '.join(hasil)
+    
+    cleaned_summary = [sentence.strip() for sentence in summary]
+    
+    return ' '.join(cleaned_summary)
 
 # 🎨 Tampilan Streamlit
 st.title("📚 Story Mancer: Analisis Unsur Cerita")
