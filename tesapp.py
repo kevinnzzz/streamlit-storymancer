@@ -92,7 +92,7 @@ def ringkasancerita(text):
     
     cleaned_summary = [sentence.strip() for sentence in summary]
     
-    return ' '.join(cleaned_summary)
+    return '  '.join(cleaned_summary)
 
 # 🎨 Tampilan Streamlit
 st.title("📚 Story Mancer: Analisis Unsur Cerita")
