@@ -86,11 +86,12 @@ def ringkasancerita(text):
         sentence_scores[sentence] = sum(word_frequencies.get(word.lower().strip(punctuation), 0) for word in words_in_sentence)
     
     select_length = int(len(sentence_tokens) * 0.3)
-    
+
+    hasil = []
     sorted_sentences = sorted(sentence_scores, key=sentence_scores.get, reverse=True)
     summary = sorted_sentences[:select_length]
-    
-    return ' '.join(summary)
+    hasil.append(summary)
+    return ' '.join(hasil)
 
 # 🎨 Tampilan Streamlit
 st.title("📚 Story Mancer: Analisis Unsur Cerita")
