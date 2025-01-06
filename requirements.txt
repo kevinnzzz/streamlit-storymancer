@@ -43,5 +43,4 @@ typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.3.0
 watchdog==6.0.0
-spacy==3.8.0
-en-core-web-sm==3.8.0
+spacy==3.8.2
