@@ -1,6 +1,6 @@
 import streamlit as st
 import spacy
-import joblib
+import pickle
 import os
 import sys
 from heapq import nlargest
@@ -18,10 +18,13 @@ vectorizer_path = os.path.join(current_dir, 'model_vectorizer.pkl')
 csv_orang_path = os.path.join(current_dir, 'orang.csv')
 csv_tempat_path = os.path.join(current_dir, 'datatempat.csv')
 
-# 🔄 Memuat Model dan Vectorizer
-model_alur = joblib.load(model_alur_path)
-model_tema = joblib.load(model_tema_path)
-vectorizer = joblib.load(vectorizer_path)
+def load_pickle(file_path):
+    with open(file_path, 'rb') as file:
+        return pickle.load(file)
+
+model_alur = load_pickle(model_alur_path)
+model_tema = load_pickle(model_tema_path)
+vectorizer = load_pickle(vectorizer_path)
 
 # 🔍 Fungsi Analisis Cerita
 def tokoh(text):
